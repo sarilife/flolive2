@@ -1,0 +1,45 @@
+.header{
+    
+    .avater {
+        vertical-align: middle;
+        height: 100%;
+        border-radius: 50%;
+      }
+    .passport{
+        font-size: 1.5rem;        
+    }
+}
+
+.first-section{
+    .table {
+        border-collapse: collapse;
+        width: 100%;
+        overflow-y: scroll;
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+          }
+          tr:hover {background-color:#f5f5f5;}
+      }
+      
+      
+}
+
+.second-section{
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer{
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .input{
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<div 
+    class="button-wrapper"
+    [ngClass]="{'large':buttonType==='large',
+    'medium':buttonType==='medium',
+    'small':buttonType==='small',
+    'disable':disabled}"
+    [style.background-color]="primaryColor"
+    (click)="click()"
+     >
+    <ng-content></ng-content>
+</div>

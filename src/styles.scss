@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+
+.screen-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    .side-bar{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        background-color: red;
+        
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: yellow;
+        .header{
+            display: flex;
+            align-items: center;
+            height: 20%;
+            background-color: blue;
+
+        }
+        .sections{
+            display: flex;
+            flex-direction: row;
+            height: 80%;
+            background-color: blueviolet;
+            .first-section{
+                background-color: rgb(226, 43, 43);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+            }
+
+            .second-section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: rgb(226, 86, 43);
+                width: 50%;
+            }
+        }
+        .footer{
+            height: 20%;
+            background-color: brown;
+        }
+    }
+}

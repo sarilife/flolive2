@@ -1,0 +1,35 @@
+.button-wrapper{
+    // background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    &:hover{
+        filter: brightness(.8);
+    }
+}
+
+.large{
+    height: 20px;
+    width: 80px;
+}
+
+.medium{
+    height: 15px;
+    width: 50px;
+}
+
+.small{
+    height: 10px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.disable{
+    background-color:gray !important;
+    &:hover{
+        filter:none;
+    }
+}

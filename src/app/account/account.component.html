@@ -1,0 +1,59 @@
+<div class="screen-wrapper">
+    <div class="side-bar">
+
+    </div>
+    <div class="content">
+        <div class="header">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" 
+            class="avater" />
+            <div class="passport">
+                Passport #: 123456789
+            </div>
+        </div>
+        <div class="sections">
+            <div class="first-section">
+                <table class="table">
+                    <thead>
+                        <tr><th>Currency</th><th>Amount</th><th>Date</th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let transaction of transactions;">
+                            <td>{{transaction.currency}}</td>
+                            <td>{{transaction.amount}}</td>
+                            <td>{{transaction.date}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="second-section">
+                Settings
+                <div class="buttons">
+                    <button (click)="about()">about</button>
+                    <button (click)="settings()">settings</button>
+                    <button (click)="notifications()">notifications</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Support
+
+            <form [formGroup]="supportForm" class="form" (ngSubmit)="onSubmit()">
+  
+                <label>
+                  Email:
+                  <input type="email" formControlName="email" class="input">
+                </label>
+                
+                <label>
+                  Message:
+                  <textarea type="text" formControlName="message" class="input"></textarea>
+                </label>
+
+                <input type="submit" value="Send" >
+
+              
+              </form>
+        </div>
+    </div>
+</div>

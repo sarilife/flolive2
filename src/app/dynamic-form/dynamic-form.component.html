@@ -1,0 +1,59 @@
+<div class="form-wrapper">
+
+    <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+
+        <fieldset >
+            <input type="radio" value="sent" formControlName="formStatus" > <span>not sent yet</span>
+            <input type="radio" value="not-sent" formControlName="formStatus"  > <span>already sent</span>
+        </fieldset>
+
+        <div *ngIf="this.dynamicForm.controls.formStatus.value=='sent'; else notSentForm;">
+            <fieldset >
+                <label>
+                    Upload file
+                </label>
+            <input type="file" formControlName="uploadFile"/>
+            </fieldset>
+
+            <fieldset >
+                <label>
+                    send date
+                </label>
+            <input type="date"  formControlName="sendDate"/>
+            </fieldset>
+            <fieldset >
+                <label>
+                    send date
+                </label>
+            <input type="text"  formControlName="comment"/>
+            </fieldset>
+        </div>
+        <ng-template #notSentForm>
+            <fieldset >
+                <label>
+                    Passport number
+                </label>
+            <input type="text" formControlName="passportNumber"/>
+            </fieldset>
+
+            <fieldset >
+                <label>
+                    urgent
+                </label>
+                <input type="radio" value="urgent" formControlName="urgent" /><span>urgent</span>
+                <input type="radio" value="not urgent" formControlName="urgent" /><span>not urgent</span>
+            </fieldset>
+            <fieldset >
+                <label>
+                    deadline
+                </label>
+            <input type="text"  formControlName="deadline"/>
+            </fieldset>
+        </ng-template>
+
+        <fieldset >
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+
+</div>
